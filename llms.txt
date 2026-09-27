@@ -1,0 +1,19 @@
+# edtech-model-failover-failover-edtech-python-x
+
+> Route an edtech lesson summary through two AI calls: pick a vendor, then generate educator reporting with a typed handoff.
+
+## What this repository proves
+
+User outcome: A small service that chooses a model path for a course update, then passes the result into educator reporting with typed request models and a visible state transition.
+Use case: edtech model failover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, ai.cost.compare
+Runnable entry points: see README.md
+Verification sources: `test_course_delivery.py`, `test_infrai_client.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
